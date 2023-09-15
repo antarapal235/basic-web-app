@@ -21,8 +21,8 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("power")) {
     return (
-      (parseInt(query.split(" ")[2])**parseInt(query.split(" ")[-1].replace(/\?/g, ''))).toString()
-    );
+      (Math.pow(parseInt(query.split(" ")[2]),parseInt(query.split(" ")[-1].replace(/\?/g, ''))).toString()
+    ));
   }
 
   if (query.toLowerCase().includes("multiplied")) {
