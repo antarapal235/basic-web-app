@@ -21,7 +21,7 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("multiplied")) {
     return (
-      (parseInt(query.split(" ")[2])*parseInt(query.split(" ")[4].replace(/\?/g, ''))).toString()
+      (parseInt(query.split(" ")[2])*parseInt(query.split(" ")[5].replace(/\?/g, ''))).toString()
     );
   }
 
