@@ -19,6 +19,12 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("power")) {
+    return (
+      (parseInt(query.split(" ")[2])**parseInt(query.split(" ")[-1].replace(/\?/g, ''))).toString()
+    );
+  }
+
   if (query.toLowerCase().includes("multiplied")) {
     return (
       (parseInt(query.split(" ")[2])*parseInt(query.split(" ")[5].replace(/\?/g, ''))).toString()
