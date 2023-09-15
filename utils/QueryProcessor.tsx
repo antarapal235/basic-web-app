@@ -19,6 +19,12 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("Which of the following numbers is the largest")) {
+    return (
+      Math.max((parseInt(query.split(" ")[-1]), parseInt(query.split(" ")[-2]), parseInt(query.split(" ")[-3]))).toString()
+    );
+  }
+
   if (query.toLowerCase().includes("What is your Andrew ID?")) {
     return (
       "antarap"
