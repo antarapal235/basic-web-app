@@ -13,6 +13,12 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("plus")) {
+    return (
+      (parseInt(query.split(" ")[2]) + parseInt(query.split(" ")[4])).toString()
+    );
+  }
+
   if (query.toLowerCase().includes("What is your Andrew ID?")) {
     return (
       "antarap"
